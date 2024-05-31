@@ -1,23 +1,6 @@
-## Common API ´Â SMS / Telegram Àü¼Û¿ë http API ÀÔ´Ï´Ù.
-## Http Java Deamon ÇüÅÂ·Î 
+## Http Java Deamon í˜•íƒœë¡œ ì ìš©
 
-### ¾Æ·¡ ¿¹½Ã¸¦ Âü°íÇÏ¼¼¿ä.
-¹®ÀÚ ¹ß¼Û <br>
-curl -X POST http://localhost:8000/api/send-sms -H 'Content-Type: application/json;charset=UTF-8' -H 'cache-control: no-cache' -d '{"phoneNo":"01064386738","msg":"¾È³çÇÏ¼¼¿ä."}'
+### ì•„ë˜ ì˜ˆì‹œë¥¼ ì°¸ê³ í•˜ì„¸ìš”.
 
-±×·ì ¹®ÀÚ ¹ß¼Û <br>
-curl -X POST http://localhost:8000/api/send-sms-group -H 'Content-Type: application/json;charset=UTF-8' -H 'cache-control: no-cache' -d '{"groupID":"1","msg":"¾È³çÇÏ¼¼¿ä."}'
-
-ÅÚ·¹±×·¥ Àü¼Û <br>
-curl -X POST http://localhost:8000/api/send-telegram -H 'Content-Type: application/json;charset=UTF-8' -H 'cache-control: no-cache' -d '{"groupID":"SCOUTER","msg":"Å×½ºÆ® ¸Ş½ÃÁö Àü¼Û"}'
-
-Å×½ºÆ® <br>
-curl -X POST http://localhost:8000/api/testCall -H 'Content-Type: application/json;charset=UTF-8' -H 'cache-control: no-cache' -d '{"phoneNo":"01064386738","msg":"¾È³çÇÏ¼¼¿ä."}'
-
-
-
-cd /home/monitor/classes
-
-/usr/local/java1.8/jdk1.8.0_241/bin/javac -cp .:/home/monitor/lib/*:/home/monitor/classes -encoding utf-8 CommonApi.java <br>
-/usr/local/java1.8/jdk1.8.0_241/bin/java -cp .:/home/monitor/lib/*:/home/monitor/classes -Dfile.encoding=utf-8 CommonApi &
-
+í…ŒìŠ¤íŠ¸ <br>
+curl -X POST http://localhost:8000/api/test-call -H 'Content-Type: application/json;charset=UTF-8' -H 'cache-control: no-cache' -d '{"phoneNo":"010","msg":"ì•ˆë…•í•˜ì„¸ìš”."}'
