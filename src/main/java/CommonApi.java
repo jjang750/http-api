@@ -49,6 +49,7 @@ public class CommonApi {
     static class RootHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
+            //POST 메소드만 허용
             if ("POST".equals(exchange.getRequestMethod())) {
                 URI requestURI = exchange.getRequestURI();
                 log.println(" URL : " + requestURI.getPath());
@@ -56,6 +57,7 @@ public class CommonApi {
                 log.println("body : " + body);
                 Map<String, String> queryParams = queryToMap(body);
                 String response = "{}";
+                //API 주소만 허용
                 if ("/api/test-call".equals(requestURI.getPath())) {
                     response = body;
                 } else {
